@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sochiahetcho5() {
+        let a=0;
+        let b=1;
+        while (true) {
+            if (a % 5 ===0) {
+                return a;
+            }
+            let temp = a;
+            a = b;
+            b = temp + b;
+        }
+    }
+    const result = sochiahetcho5();
+    document.write("số đầu tiên trong dãy fibonacci chia hết cho 5:", result);
+</script>
+
+</body>
+</html>

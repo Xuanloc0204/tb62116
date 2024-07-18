@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        label, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: row;
+
+
+        }
+    </style>
+</head>
+<body>
+<h1>Máy tính bỏ túi</h1>
+<form id="calculator-form">
+    <div style="display:inline-block;">
+        <label for="num1">Số thứ nhất:</label>
+        <input type="number" id="num1" required>
+    </div>
+
+    <div style="display:inline-block;">
+        <label for="num2">Số thứ hai:</label>
+        <input type="number" id="num2" required>
+    </div>
+
+    <label>Phép tính:</label>
+    <div class="radio-group">
+        <table width="300" border="0">
+            <tbody align="center">
+            <tr>
+                <td>
+                    <label>
+                        <input type="radio" name="operation" value="add" required> Cộng
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="radio" name="operation" value="subtract"> Trừ
+                    </label>
+                </td>
+
+                <td>
+                    <label>
+                        <input type="radio" name="operation" value="multiply"> Nhân
+                    </label>
+                </td>
+
+                <td>
+                    <label>
+                        <input type="radio" name="operation" value="divide"> Chia
+                    </label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="calculate()">Kết Quả</button>
+    </div>
+
+
+</form>
+
+<h2 id="result"></h2>
+<script>
+    function getValueFromForm() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        // Lấy value của ô input có name là operation trong trạng thái check
+        const operation = document.querySelector('input[name="operation"]:checked').value;
+
+        return { num1, num2, operation };
+    }
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    function subtract(a, b) {
+        return a - b;
+    }
+
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    function divide(a, b) {
+        if (b === 0) {
+            return 'Không thể chia cho 0';
+        }
+        return a / b;
+    }
+
+    function calculate() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        // Lấy value của ô input có name là operation trong trạng thái check
+        const operation = document.querySelector('input[name="operation"]:checked').value;
+
+        // Destructuring (2016)
+        // const { num1, num2, operation } = getValueFromForm();
+        let result;
+
+        switch (operation) {
+            case 'add':
+                result = add(num1, num2);
+                break;
+            case 'subtract':
+                result = subtract(num1, num2);
+                break;
+            case 'multiply':
+                result = multiply(num1, num2);
+                break;
+            case 'divide':
+                result = divide(num1, num2);
+                break;
+            default:
+                result = 'Phép tính không hợp lệ';
+        }
+
+        // Literal object
+        // `Kết quả ${result}`
+        document.getElementById('result').innerText = "kết quả "+result;
+    }
+</script>
+</body>
+</html>

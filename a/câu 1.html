@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>nhập giá trị</h3>
+<input type="number" id="abc">
+<script>
+    function calculateSquare() {
+        let userInput = prompt("Nhập số nguyên:");
+        let number = parseInt(userInput);
+        if (!isNaN(number)) {
+            let square = number * number;
+            alert(`Bình phương của ${number} là ${square}`);
+        } else {
+            alert("Bạn đã nhập không phải số nguyên. Vui lòng thử lại.");
+        }
+    }
+    calculateSquare();
+
+</script>
+</body>
+</html>

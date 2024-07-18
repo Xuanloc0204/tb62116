@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table style="width: 100%">
+    <thead style="text-align: left">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="number" id="amount"></td>
+        <td><select id="from">
+            <option value="1">Viet Nam</option>
+            <option value="23000">USD</option>
+        </select></td>
+        <td><select id="to">
+            <option value="1">Viet Nam</option>
+            <option value="23000">USD</option>
+        </select></td>
+        <td><button onclick="convert()">Convert</button></td>
+    </tr>
+    <p id="result"></p>
+    <script src="demo.js"></script>
+    </tbody>
+</table>
+</body>
+</html>
