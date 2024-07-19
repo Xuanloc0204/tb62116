@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhap so luong phan tu');
+    while (n<0) {
+        n= +prompt(' nhap lai phan tu');
+    }
+    let arr =[];
+    for (let i=0; i<n ; i++) {
+        arr[i] = +prompt("nhap phan tu thu" + i);
+    }
+    document.write(arr)
+</script>
+
+</body>
+</html>

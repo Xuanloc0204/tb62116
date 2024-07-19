@@ -7,17 +7,15 @@
 <body>
 <script>
     let num = +prompt('Nhập số');
-        if(num<2){
-            alert(num +' Không phải là số nguyên tố');
-        }
-        let sqrtnum = Math.sqrt(num);
-        for (let i=1;i<=sqrtnum; i++) {
-            if (num %i === 0){
-                alert(num+ ' Không phải là số nguyên tố');
-            } else
-                alert(num+ ' là số nguyên tố');
-        }
-
+    if (num < 2) {
+        alert(num + ' Không phải là số nguyên tố');
+    }
+    for (let i = 1; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            alert(num + ' Không phải là số nguyên tố');
+        } else
+            alert(num + ' là số nguyên tố');
+    }
 </script>
 </body>
 </html>
