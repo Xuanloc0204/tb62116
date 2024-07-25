@@ -4,5 +4,5 @@ function addNumbers() {
     result = firstNum + secondNum;
     return result;
 }
-result = 0;
-result = addNumbers(); 
+let result = 0;
+alert(addNumbers());

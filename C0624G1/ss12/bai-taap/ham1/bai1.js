@@ -1,4 +1,4 @@
 function alertMessage() {
-    alertMessage('xin chao');
-}
-
+    alert ('xin chao');
+};
+console.log(alertMessage())

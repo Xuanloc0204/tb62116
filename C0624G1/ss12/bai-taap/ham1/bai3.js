@@ -6,4 +6,4 @@ function number(a, b) {
     }
     return
 }
-number(1,10);
+number(10,5);
