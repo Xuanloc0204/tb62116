@@ -1,9 +1,10 @@
-
 function createArray() {
     let arr = [];
-    let soluong = prompt(" nhap so luong phan tu");
-    for (let i = 0; i < soluong; i++) {
-        let nhapso =prompt("nhap phan tu");
-        arr.push(nhapso);
+    for (let i = 0; i < 10; i++) {
+        let phantu = Math.floor(Math.random() * 100) + 1;
+        arr.push(phantu);
     }
+    return arr;
 }
+let hienthi = createArray();
+console.log(hienthi);
