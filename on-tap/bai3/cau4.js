@@ -1,15 +1,22 @@
 //kiem tra so chinh phuong
 
 function isASquareNumber(n) {
+    let count = 0;
     for (let i = 0; i <= n; i++) {
         if (Math.pow(i, 2) === n) {
-            return true;
+            count++;
         }
+    }
+    if (count > 0) {
+        return true;
+    } else {
+        return false;
     }
 }
 
-//tinh tong cac so chinh phuong
 
+// //tinh tong cac so chinh phuong
+//
 function sumOfSquareNumbers(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
