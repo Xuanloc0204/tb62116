@@ -1,7 +1,7 @@
 let arr = [2, 6, 3, 8, 2, 9, 6];
 
 
-function soNguyenTo(a) {
+function soNguyenTo(num) {
     if (num <= 1) {
         return false;
     }
@@ -22,6 +22,7 @@ function a(a) {
     }
     return newarr;
 }
+
 
 let hienthi = a(arr);
 console.log("mang so nguyen to" + hienthi);
