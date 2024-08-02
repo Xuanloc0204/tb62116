@@ -43,5 +43,5 @@ function sapXepTangDan(arr) {
     return arr;
 }
 
-let hienthisapxep = sapXepTangDan(arr);
-console.log(arr);
+let hienthisapxep = sapXepTangDan(hienthi);
+console.log(hienthisapxep);
